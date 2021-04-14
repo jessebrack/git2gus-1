@@ -20,8 +20,8 @@ module.exports = async function getByRelatedUrl(relatedUrl) {
     );
     return Promise.resolve(
         conn
-            .sobject('ADM_Work__c')
-            .find({ related_url__c: relatedUrl })
+            .sobject('agf__ADM_Work__c')
+            .find({ agf__related_url__c: relatedUrl })
             .execute((err, ret) => {
                 if (err) {
                     return console.error(err, ret);

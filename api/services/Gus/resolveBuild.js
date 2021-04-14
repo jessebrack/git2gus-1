@@ -20,10 +20,12 @@ module.exports = async function resolveBuild(name) {
     );
     return Promise.resolve(
         conn
-            .sobject('ADM_Build__c')
+            .sobject('agf__ADM_Build__c')
             .find({ name })
             .execute((err, ret) => {
+                console.log(name);
                 if (err) {
+                    console.log('no');
                     return console.error(err, ret);
                 }
                 return ret[0].Id;

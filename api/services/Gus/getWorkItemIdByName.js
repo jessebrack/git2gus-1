@@ -20,7 +20,7 @@ module.exports = async function getWorkItemItemByName(workItemName) {
     );
     return Promise.resolve(
         conn
-            .sobject('ADM_Work__c')
+            .sobject('agf__ADM_Work__c')
             .find({ Name: workItemName })
             .execute((err, ret) => {
                 if (err) {

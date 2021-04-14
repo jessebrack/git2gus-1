@@ -20,7 +20,7 @@ module.exports = async function getById(id) {
     );
     return Promise.resolve(
         conn
-            .sobject('ADM_Work__c')
+            .sobject('agf__ADM_Work__c')
             .find({ id })
             .execute((err, ret) => {
                 if (err) {

@@ -17,7 +17,7 @@ module.exports = function createChangelistInGus(
         if (err) {
             return console.error(err);
         }
-        conn.sobject('ADM_Change_List__c').create(
+        conn.sobject('agf__ADM_Change_List__c').create(
             {
                 Perforce_Changelist__c: relativeUrl,
                 Work__c: issueId,
