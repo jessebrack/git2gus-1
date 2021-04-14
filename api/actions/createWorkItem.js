@@ -65,7 +65,7 @@ module.exports = {
             const bugRecordTypeId = Gus.getBugRecordTypeId();
 
             const alreadyLowestPriority =
-                issue && issue.Priority__c !== '' && issue.Priority__c <= priority;
+                issue && issue.agf__Priority__c !== '' && issue.agf__Priority__c <= priority;
             const recordIdTypeIsSame = issue && issue.RecordTypeId === recordTypeId;
             const isRecordTypeBug = recordTypeId === bugRecordTypeId;
 
@@ -107,4 +107,3 @@ module.exports = {
         return null;
     }
 };
-
